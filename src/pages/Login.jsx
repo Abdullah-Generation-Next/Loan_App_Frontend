@@ -51,21 +51,21 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 p-3 sm:p-4">
       <div className="absolute inset-0 bg-black opacity-10"></div>
       
-      <div className="relative bg-white/95 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-md transform transition-all hover:scale-[1.02]">
+      <div className="relative bg-white/95 backdrop-blur-lg p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-md transform transition-all hover:scale-[1.02]">
         {/* Logo/Icon */}
-        <div className="flex justify-center mb-6">
-          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex justify-center mb-4 sm:mb-6">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center mb-2 text-gray-800">Welcome Back</h2>
-        <p className="text-center text-gray-600 mb-8">Sign in to continue to your account</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-800">Welcome Back</h2>
+        <p className="text-center text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">Sign in to continue to your account</p>
 
         {/* Error Message */}
         {error && (
@@ -78,8 +78,8 @@ export default function Login() {
         )}
 
         <form onSubmit={handleLogin}>
-          <div className="mb-5">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-4 sm:mb-5">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Email Address
             </label>
             <div className="relative">
@@ -94,14 +94,14 @@ export default function Login() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-sm sm:text-base"
                 required
               />
             </div>
           </div>
 
-          <div className="mb-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-5 sm:mb-6">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Password
             </label>
             <div className="relative">
@@ -116,7 +116,7 @@ export default function Login() {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Enter your password"
-                className="w-full pl-10 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                className="w-full pl-10 pr-12 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-sm sm:text-base"
                 required
               />
               <button
@@ -138,12 +138,12 @@ export default function Login() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-5 sm:mb-6 gap-2 sm:gap-0">
             <label className="flex items-center">
               <input type="checkbox" className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
-              <span className="ml-2 text-sm text-gray-600">Remember me</span>
+              <span className="ml-2 text-xs sm:text-sm text-gray-600">Remember me</span>
             </label>
-            <a href="#" className="text-sm text-blue-600 hover:text-blue-800 font-semibold">
+            <a href="#" className="text-xs sm:text-sm text-blue-600 hover:text-blue-800 font-semibold">
               Forgot password?
             </a>
           </div>
@@ -151,7 +151,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3.5 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 sm:py-3.5 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
           >
             {loading ? (
               <>
@@ -168,8 +168,8 @@ export default function Login() {
         </form>
 
         {/* Signup Navigation */}
-        <div className="mt-6 text-center">
-          <p className="text-gray-600">
+        <div className="mt-5 sm:mt-6 text-center">
+          <p className="text-xs sm:text-sm text-gray-600">
             Don't have an account?{" "}
             <Link
               to="/register"

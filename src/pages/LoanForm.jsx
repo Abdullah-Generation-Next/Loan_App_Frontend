@@ -81,20 +81,20 @@ export default function LoanForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-4 sm:py-6 md:py-8 px-3 sm:px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full mb-4 shadow-lg">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full mb-3 sm:mb-4 shadow-lg">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Loan Application Form</h1>
-          <p className="text-gray-600">Fill in your details to apply for a loan</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">Loan Application Form</h1>
+          <p className="text-sm sm:text-base text-gray-600">Fill in your details to apply for a loan</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-10">
+        <form onSubmit={handleSubmit} className="bg-white/80 backdrop-blur-lg rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10">
           {/* Success Message */}
           {success && (
             <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center">
@@ -122,14 +122,14 @@ export default function LoanForm() {
           )}
 
           {/* Personal Information Section */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
-              <span className="w-1 h-8 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full mr-3"></span>
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6 flex items-center">
+              <span className="w-1 h-6 sm:h-8 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full mr-2 sm:mr-3"></span>
               Personal Information
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -144,14 +144,14 @@ export default function LoanForm() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="Enter your full name"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Mobile Number <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -166,14 +166,14 @@ export default function LoanForm() {
                     value={formData.mobileNumber}
                     onChange={handleChange}
                     placeholder="Enter your mobile number"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                   />
                 </div>
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Email Address <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -188,7 +188,7 @@ export default function LoanForm() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email address"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -197,14 +197,14 @@ export default function LoanForm() {
           </div>
 
           {/* Loan Details Section */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
-              <span className="w-1 h-8 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full mr-3"></span>
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6 flex items-center">
+              <span className="w-1 h-6 sm:h-8 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full mr-2 sm:mr-3"></span>
               Loan Details
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Loan Amount (₹) <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -219,7 +219,7 @@ export default function LoanForm() {
                     value={formData.loanAmount}
                     onChange={handleChange}
                     placeholder="Enter loan amount"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                     min="10000"
                   />
@@ -227,7 +227,7 @@ export default function LoanForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Loan Duration (Months) <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -242,7 +242,7 @@ export default function LoanForm() {
                     value={formData.loanDuration}
                     onChange={handleChange}
                     placeholder="Enter duration in months"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                     min="6"
                     max="120"
@@ -251,7 +251,7 @@ export default function LoanForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Loan Purpose <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -264,7 +264,7 @@ export default function LoanForm() {
                     name="loanPurpose"
                     value={formData.loanPurpose}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all appearance-none bg-white"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all appearance-none bg-white text-sm sm:text-base"
                     required
                   >
                     <option value="">Select loan purpose</option>
@@ -284,7 +284,7 @@ export default function LoanForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Employment Type <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -297,7 +297,7 @@ export default function LoanForm() {
                     name="employmentType"
                     value={formData.employmentType}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all appearance-none bg-white"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all appearance-none bg-white text-sm sm:text-base"
                     required
                   >
                     <option value="">Select employment type</option>
@@ -315,7 +315,7 @@ export default function LoanForm() {
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                   Monthly Income (₹) <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -330,7 +330,7 @@ export default function LoanForm() {
                     value={formData.monthlyIncome}
                     onChange={handleChange}
                     placeholder="Enter your monthly income"
-                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-sm sm:text-base"
                     required
                     min="10000"
                   />
@@ -340,11 +340,11 @@ export default function LoanForm() {
           </div>
 
           {/* Submit Button */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
             <button
               type="submit"
               disabled={loading || success}
-              className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+              className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
             >
               {loading ? (
                 <>
@@ -374,7 +374,7 @@ export default function LoanForm() {
               type="button"
               onClick={() => navigate("/login")}
               disabled={loading}
-              className="px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 sm:px-6 py-3 sm:py-4 border-2 border-gray-300 text-gray-700 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base hover:bg-gray-50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Cancel
             </button>

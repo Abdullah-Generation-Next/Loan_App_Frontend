@@ -6,3 +6,34 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Better mobile responsiveness */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Prevent text size adjustment on iOS */
+* {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Better touch targets for mobile */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Improve form inputs on mobile */
+input, select, textarea {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}

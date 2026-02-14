@@ -70,21 +70,21 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-600 to-red-500 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-600 to-red-500 p-3 sm:p-4">
       <div className="absolute inset-0 bg-black opacity-10"></div>
       
-      <div className="relative bg-white/95 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-md transform transition-all hover:scale-[1.02]">
+      <div className="relative bg-white/95 backdrop-blur-lg p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-md transform transition-all hover:scale-[1.02] max-h-[95vh] overflow-y-auto">
         {/* Logo/Icon */}
-        <div className="flex justify-center mb-6">
-          <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex justify-center mb-4 sm:mb-6">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
+            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
             </svg>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center mb-2 text-gray-800">Create Account</h2>
-        <p className="text-center text-gray-600 mb-8">Join us and start your loan journey</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 text-gray-800">Create Account</h2>
+        <p className="text-center text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">Join us and start your loan journey</p>
 
         {/* Error Message */}
         {error && (
@@ -97,8 +97,8 @@ export default function Register() {
         )}
 
         <form onSubmit={handleRegister}>
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-3 sm:mb-4">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Full Name
             </label>
             <div className="relative">
@@ -113,14 +113,14 @@ export default function Register() {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Enter your full name"
-                className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all text-sm sm:text-base"
                 required
               />
             </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-3 sm:mb-4">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Mobile Number
             </label>
             <div className="relative">
@@ -135,14 +135,14 @@ export default function Register() {
                 value={formData.mobileNumber}
                 onChange={handleChange}
                 placeholder="Enter your mobile number"
-                className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all text-sm sm:text-base"
                 required
               />
             </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-3 sm:mb-4">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Email Address
             </label>
             <div className="relative">
@@ -157,14 +157,14 @@ export default function Register() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all text-sm sm:text-base"
                 required
               />
             </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-3 sm:mb-4">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Password
             </label>
             <div className="relative">
@@ -179,7 +179,7 @@ export default function Register() {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a password"
-                className="w-full pl-10 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all"
+                className="w-full pl-10 pr-12 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all text-sm sm:text-base"
                 required
               />
               <button
@@ -201,8 +201,8 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="mb-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+          <div className="mb-5 sm:mb-6">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
               Confirm Password
             </label>
             <div className="relative">
@@ -217,7 +217,7 @@ export default function Register() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Confirm your password"
-                className="w-full pl-10 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all"
+                className="w-full pl-10 pr-12 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all text-sm sm:text-base"
                 required
               />
               <button
@@ -242,7 +242,7 @@ export default function Register() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3.5 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 sm:py-3.5 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
           >
             {loading ? (
               <>
@@ -259,8 +259,8 @@ export default function Register() {
         </form>
 
         {/* Login Navigation */}
-        <div className="mt-6 text-center">
-          <p className="text-gray-600">
+        <div className="mt-5 sm:mt-6 text-center">
+          <p className="text-xs sm:text-sm text-gray-600">
             Already have an account?{" "}
             <Link
               to="/login"
